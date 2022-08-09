@@ -6,11 +6,13 @@ public class LineComparison {
     public static void main(String[] args) {
         System.out.println("Welcome to Line Comparison Computation Program");
 
-        Double line1 = lengthOfLine();
+        LineComparison lineComparison = new LineComparison();
+
+        Double line1 = lineComparison.lengthOfLine();
 
         System.out.println("Length of line : " + line1);
 
-        Double line2 = lengthOfLine();
+        Double line2 = lineComparison.lengthOfLine();
 
         //checking line1 is equal, greater or less than the other line.
         int len = line1.compareTo(line2);
@@ -27,7 +29,7 @@ public class LineComparison {
     /*
     * UC-1 -> calculate the length of line
     * */
-    public static double lengthOfLine(){
+    public double lengthOfLine(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter values for x1 and y1");
         double x1 = sc.nextDouble();
