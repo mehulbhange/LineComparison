@@ -14,11 +14,13 @@ public class LineComparison {
 
         Double line2 = lineComparison.lengthOfLine();
 
+
         //check if two lines are equal or not
         if(lineComparison.isLineEquals(line1, line2))
             System.out.println("Lines are equal");
         else
             System.out.println("Lines are not equal");
+
 
         //checking line1 is equal, greater or less than the other line.
         lineComparison.compareLines(line1, line2);
