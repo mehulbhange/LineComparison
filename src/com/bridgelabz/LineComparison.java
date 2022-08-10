@@ -14,15 +14,16 @@ public class LineComparison {
 
         Double line2 = lineComparison.lengthOfLine();
 
+
+        //check if two lines are equal or not
+        if(lineComparison.isLineEquals(line1, line2))
+            System.out.println("Lines are equal");
+        else
+            System.out.println("Lines are not equal");
+
+
         //checking line1 is equal, greater or less than the other line.
-        int len = line1.compareTo(line2);
-        if( len < 0){
-            System.out.println("line1 is less than line2");
-        }else if( len > 0){
-            System.out.println( "line1 is greater than line2");
-        }else{
-            System.out.println("lines are equal");
-        }
+        lineComparison.compareLines(line1, line2);
 
     }
 
@@ -41,5 +42,21 @@ public class LineComparison {
 
         double lengthOfLine = Math.sqrt( Math.pow(x2-x1,2) + Math.pow(y2-y1,2) );
         return lengthOfLine;
+    }
+
+    public boolean isLineEquals(Double line1, Double line2){
+        return line1.equals(line2);
+    }
+
+    //compare lines
+    public void compareLines(Double line1, Double line2){
+        int len = line1.compareTo(line2);
+        if( len < 0){
+            System.out.println("line1 is less than line2");
+        }else if( len > 0){
+            System.out.println( "line1 is greater than line2");
+        }else{
+            System.out.println("lines are equal");
+        }
     }
 }
